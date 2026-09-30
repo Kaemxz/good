@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vector Coffee Roaster | คาเฟ่และโรงคั่วกาแฟ ขอนแก่น</title>
+<meta name="description" content="Vector Coffee Roaster คาเฟ่และโรงคั่วกาแฟในเมืองขอนแก่น เน้นคุณภาพกาแฟ ความจริงใจ และการพัฒนาอย่างต่อเนื่อง">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1b1712;--paper:#fbfaf8;--sand:#f1eee9;--walnut:#7a4326;--copper:#b8703f;--stone:#6f6a62;--line:#e2ddd5;--head:'Prompt','Noto Sans Thai',sans-serif;--body:'Noto Sans Thai','Prompt',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.8;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);font-weight:500;line-height:1.35}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:.6rem}
+.lead{color:var(--stone);max-width:60ch}
+section{padding:96px 0}
+.alt{background:var(--sand)}
+header{position:sticky;top:0;z-index:20;background:rgba(251,250,248,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--head);font-weight:600;letter-spacing:.14em}
+.logo svg{width:26px;height:26px}
+nav ul{display:flex;gap:28px;list-style:none;font-size:.95rem}
+nav a{text-decoration:none;color:var(--stone);padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover{color:var(--ink);border-color:var(--copper)}
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;padding:0 0 72px;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,14,9,.88) 8%,rgba(20,14,9,.35) 60%,rgba(20,14,9,.15))}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);max-width:15ch;animation:rise .9s ease both}
+.hero p{max-width:52ch;margin:18px 0 30px;color:#eee6dc;font-size:1.08rem;animation:rise .9s .15s ease both}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero .btns{animation:rise .9s .3s ease both}
+.btn{display:inline-block;padding:12px 28px;text-decoration:none;font-family:var(--head);font-weight:500;font-size:.98rem;border:1.5px solid #fff;transition:.2s}
+.btn.solid{background:var(--copper);border-color:var(--copper);color:#fff}
+.btn.solid:hover{background:#a05f33;border-color:#a05f33}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start;margin-top:40px}
+.split h3{font-size:1.15rem;margin-bottom:4px;color:var(--walnut)}
+.item{padding:20px 0;border-top:1px solid var(--line)}
+.item p{color:#3a342c}
+.persona{background:var(--ink);color:#f3ece3;padding:36px;border-left:5px solid var(--copper)}
+.persona h3{color:#e2b58c}
+.persona p{margin-top:8px;color:#e8dfd3}
+.traits{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.traits span{border:1px solid rgba(255,255,255,.35);padding:4px 16px;font-size:.92rem}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:44px}
+.step{padding:0 24px 0 0;position:relative}
+.step::before{content:"";display:block;height:2px;background:var(--walnut);margin-bottom:22px}
+.step::after{content:"";position:absolute;top:-5px;left:0;width:12px;height:12px;background:var(--copper);border-radius:50%}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{color:var(--stone);font-size:.96rem}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:230px;gap:14px;margin-top:40px}
+.gallery figure{position:relative;overflow:hidden;background:var(--sand)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:0;bottom:0;right:0;padding:26px 16px 12px;color:#fff;font-size:.9rem;background:linear-gradient(transparent,rgba(20,14,9,.75))}
+.g1{grid-column:span 4;grid-row:span 2}
+.g2{grid-column:span 2;grid-row:span 2}
+.g3,.g4{grid-column:span 3;grid-row:span 2}
+.sym{display:grid;grid-template-columns:repeat(2,1fr);margin-top:40px;border-top:1px solid var(--line)}
+.sym div{padding:26px 32px 26px 0;border-bottom:1px solid var(--line)}
+.sym h3{font-size:1.05rem;color:var(--walnut)}
+.sym p{color:#3a342c;font-size:.98rem}
+.swatches{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+.sw{width:64px;text-align:center;font-size:.72rem;color:var(--stone)}
+.sw i{display:block;height:44px;border:1px solid var(--line);margin-bottom:4px}
+.strat{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+.strat article{background:var(--sand);padding:28px 24px;border-top:4px solid var(--walnut)}
+.strat h3{font-size:1.05rem;margin-bottom:8px}
+.strat p{color:#3a342c;font-size:.95rem}
+.contact{background:var(--ink);color:#f3ece3}
+.contact h2{color:#fff}
+.contact .lead{color:#cfc5b8}
+.contact .btns{margin-top:28px}
+.contact .btn{border-color:#cfc5b8}
+footer{background:#120f0b;color:#9b9286;text-align:center;padding:24px 0;font-size:.88rem}
+@media(max-width:860px){
+section{padding:68px 0}
+nav ul{gap:16px;font-size:.88rem}
+.logo span{display:none}
+.split{grid-template-columns:1fr;gap:36px}
+.steps{grid-template-columns:1fr 1fr;row-gap:36px}
+.strat{grid-template-columns:1fr 1fr}
+.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+.g1{grid-column:span 2}
+.g2,.g3,.g4{grid-column:span 1;grid-row:span 2}
+.sym{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+.steps,.strat{grid-template-columns:1fr}
+nav{display:none}
+.persona{padding:26px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap bar">
+<a class="logo" href="#top" aria-label="Vector Coffee Roaster">
+<svg viewBox="0 0 32 32" fill="none" stroke="#7a4326" stroke-width="2.6" stroke-linecap="square"><path d="M4 26 L26 6"/><path d="M12 6 H26 V20"/></svg>
+<span>VECTOR</span>
+</a>
+<nav aria-label="เมนูหลัก">
+<ul>
+<li><a href="#story">เรื่องราว</a></li>
+<li><a href="#journey">เส้นทาง</a></li>
+<li><a href="#space">พื้นที่ร้าน</a></li>
+<li><a href="#identity">อัตลักษณ์</a></li>
+<li><a href="#service">บริการ</a></li>
+<li><a href="#contact">ติดต่อ</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main id="top">
+<div class="hero">
+<img src="https://lh3.googleusercontent.com/d/1M0VYP3GWbdcGyXYgHi_pdZ0CwzPA4TkP" alt="ทางเดินไม้ริมสระน้ำและอาคารกระจกของร้านในยามค่ำ">
+<div class="wrap">
+<h1>Vector Coffee Roaster</h1>
+<p>คาเฟ่และโรงคั่วกาแฟในเมืองขอนแก่น เน้นคุณภาพกาแฟ ความจริงใจ และการพัฒนาตัวเองอย่างต่อเนื่อง</p>
+<div class="btns">
+<a class="btn solid" href="#story">อ่านเรื่องราวของเรา</a>
+<a class="btn ghost" href="#contact">ติดต่อร้าน</a>
+</div>
+</div>
+</div>
+
+<section id="story">
+<div class="wrap">
+<h2>เรื่องราวของแบรนด์</h2>
+<p class="lead">Vector คือทิศทางและการเคลื่อนที่ไปข้างหน้า สะท้อนแนวคิดของร้านที่ไม่หยุดพัฒนา</p>
+<div class="split">
+<div>
+<div class="item"><h3>จุดยืนของแบรนด์</h3><p>คาเฟ่และโรงคั่วกาแฟที่เน้นคุณภาพกาแฟ ความจริงใจ และการพัฒนาตัวเองอย่างต่อเนื่อง</p></div>
+<div class="item"><h3>คำสัญญาถึงลูกค้า</h3><p>มอบกาแฟที่มีคุณภาพและประสบการณ์ที่จริงใจให้กับลูกค้า พร้อมรักษามาตรฐานของแบรนด์</p></div>
+</div>
+<div class="persona">
+<h3>ตัวตนของผู้ก่อตั้ง</h3>
+<p>ผู้ประกอบการรุ่นใหม่ที่เริ่มจากความสนใจในกาแฟ กล้าลองผิดลองถูก และพัฒนาธุรกิจจากประสบการณ์</p>
+<div class="traits" aria-label="บุคลิกของแบรนด์">
+<span>จริงจัง</span><span>เป็นกันเอง</span><span>เรียบง่าย</span><span>สร้างสรรค์</span><span>ชอบพัฒนาสิ่งใหม่</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="journey" class="alt">
+<div class="wrap">
+<h2>จากร้านเล็ก ๆ สู่โรงคั่วของตัวเอง</h2>
+<p class="lead">เส้นทางการเติบโตของ Vector Coffee Roaster</p>
+<div class="steps">
+<div class="step"><h3>ร้าน Pop-up</h3><p>เริ่มจากร้านเล็ก ๆ ชื่อ “123 Café” ในมหาวิทยาลัยขอนแก่น</p></div>
+<div class="step"><h3>สั่งสมประสบการณ์</h3><p>เรียนรู้และทดลองด้านกาแฟอย่างต่อเนื่อง</p></div>
+<div class="step"><h3>Vector Coffee Roaster</h3><p>พัฒนาเป็นแบรนด์กาแฟและโรงคั่วของตัวเอง</p></div>
+<div class="step"><h3>ร้านในเมืองขอนแก่น</h3><p>ขยายเป็นร้านที่มีพื้นที่และเอกลักษณ์ชัดเจน</p></div>
+</div>
+</div>
+</section>
+
+<section id="space">
+<div class="wrap">
+<h2>พื้นที่ของร้าน</h2>
+<p class="lead">ร้านที่ออกแบบเรียบง่าย ใช้ไม้และปูนเปลือยเป็นวัสดุหลัก ให้บรรยากาศอบอุ่นและเป็นธรรมชาติ</p>
+<div class="gallery">
+<figure class="g1"><img src="https://lh3.googleusercontent.com/d/1M0VYP3GWbdcGyXYgHi_pdZ0CwzPA4TkP" alt="ทางเดินไม้ริมสระน้ำ" loading="lazy"><figcaption>ทางเดินไม้ริมสระน้ำ</figcaption></figure>
+<figure class="g2"><img src="https://lh3.googleusercontent.com/d/1SCb6JD_C5GKWtUZ7QHcnAwbCT5_PUwZk" alt="ประตูไม้ทางเข้าร้าน" loading="lazy"><figcaption>ทางเข้าร้าน</figcaption></figure>
+<figure class="g3"><img src="https://lh3.googleusercontent.com/d/1EFPOnaItezGxECPuzy-kB0qnk0kcE8D4" alt="โซนนั่งภายในร้านผนังไม้ระแนง" loading="lazy"><figcaption>โซนนั่งภายในร้าน</figcaption></figure>
+<figure class="g4"><img src="https://lh3.googleusercontent.com/d/141O_x_j2-S604gIIfE_4m_w3ChbUyIb7" alt="บันไดไม้และโต๊ะไม้ยาวมองจากชั้นบน" loading="lazy"><figcaption>บันไดไม้และโต๊ะยาว</figcaption></figure>
+</div>
+</div>
+</section>
+
+<section id="identity" class="alt">
+<div class="wrap">
+<h2>อัตลักษณ์แบรนด์</h2>
+<p class="lead">องค์ประกอบภาพที่ใช้สื่อสารความเป็น Vector</p>
+<div class="sym">
+<div><h3>ตัวอักษร</h3><p>เรียบง่าย ทันสมัย อ่านง่าย สื่อถึงความเป็นมืออาชีพ</p></div>
+<div>
+<h3>โทนสี</h3>
+<p>ดำ ขาว น้ำตาล และสีของวัสดุธรรมชาติ สื่อถึงกาแฟ ความเรียบง่าย และความเป็นธรรมชาติ</p>
+<div class="swatches">
+<div class="sw"><i style="background:#1b1712"></i>ดำ</div>
+<div class="sw"><i style="background:#fbfaf8"></i>ขาว</div>
+<div class="sw"><i style="background:#7a4326"></i>น้ำตาลเข้ม</div>
+<div class="sw"><i style="background:#b8703f"></i>น้ำตาลทอง</div>
+<div class="sw"><i style="background:#f1eee9"></i>ทราย</div>
+</div>
+</div>
+<div><h3>โลโก้</h3><p>ใช้แนวคิดของคำว่า Vector ซึ่งสื่อถึงทิศทางและการเคลื่อนที่ไปข้างหน้า</p></div>
+<div><h3>ภาพลักษณ์</h3><p>ภาพกาแฟ เมล็ดกาแฟ เครื่องคั่ว บาริสต้า ร้านที่มีการออกแบบเรียบง่าย และกระบวนการทำงาน</p></div>
+</div>
+</div>
+</section>
+
+<section id="service">
+<div class="wrap">
+<h2>สินค้าและบริการ</h2>
+<p class="lead">ตั้งแต่การรับรู้แบรนด์ไปจนถึงความสัมพันธ์หลังการขาย</p>
+<div class="strat">
+<article><h3>การรับรู้</h3><p>ใช้โซเชียลมีเดีย การบอกต่อ และประสบการณ์ภายในร้านในการสร้างการรับรู้แบรนด์</p></article>
+<article><h3>สินค้า</h3><p>จำหน่ายกาแฟ เครื่องดื่ม และผลิตภัณฑ์ที่เกี่ยวข้องกับกาแฟ</p></article>
+<article><h3>การเข้าถึง</h3><p>ลูกค้าเข้าถึงสินค้าและบริการผ่านหน้าร้าน รวมถึงช่องทางออนไลน์และเดลิเวอรีตามช่องทางที่ร้านเปิดให้บริการ</p></article>
+<article><h3>หลังการขาย</h3><p>สร้างความสัมพันธ์ด้วยคุณภาพกาแฟ ประสบการณ์ในร้าน และรับฟังความคิดเห็นเพื่อนำมาปรับปรุงธุรกิจ</p></article>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="wrap">
+<h2>แวะมาชิมกาแฟด้วยกัน</h2>
+<p class="lead">Vector Coffee Roaster เมืองขอนแก่น</p>
+<div class="btns">
+<!-- TODO: แก้ลิงก์ด้านล่างเป็นช่องทางจริงของลูกค้า -->
+<a class="btn ghost" href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a>
+<a class="btn ghost" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+<a class="btn ghost" href="tel:+66000000000">โทรสอบถาม</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Vector Coffee Roaster. สงวนลิขสิทธิ์</div></footer>
+</body>
+</html>
